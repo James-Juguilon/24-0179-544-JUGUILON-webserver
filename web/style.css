@@ -1,0 +1,9 @@
+body {
+  background-image: url('https://images7.alphacoders.com/815/thumb-1920-815884.jpg')
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
