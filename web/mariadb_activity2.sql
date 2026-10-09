@@ -97,6 +97,7 @@ JOIN courses
 ON enrollments.course_id = courses.course_id
 ORDER BY students.name;
 
+-- CHALLENGE TASKS
 INSERT INTO students (name, course, year_level)
 VALUES
 ('John Rod', 'BSCS', 3),
@@ -124,6 +125,7 @@ VALUES
     (1, 5, '2026-10-07'), 
     (6, 4, '2026-10-07');
 
+-- TASK 1
 SELECT
 students.name,
 courses.course_name
@@ -134,6 +136,7 @@ JOIN courses
 ON enrollments.course_id = courses.course_id
 WHERE courses.course_name = 'CIT17';
 
+-- TASK 2
 SELECT
 students.name,
 courses.course_name,
@@ -145,6 +148,7 @@ JOIN courses
 ON enrollments.course_id = courses.course_id
 WHERE students.name = 'Juan Dela Cruz';
 
+-- TASK 3
 SELECT
 courses.course_name,
 COUNT(enrollments.student_id) AS total_students
@@ -153,6 +157,7 @@ LEFT JOIN enrollments
 ON courses.course_id = enrollments.course_id
 GROUP BY courses.course_id, courses.course_name;
 
+-- TASK 4
 SELECT
 courses.course_name,
 COUNT(enrollments.student_id) AS total_students
@@ -163,6 +168,7 @@ GROUP BY courses.course_id, courses.course_name
 ORDER BY total_students DESC
 LIMIT 1;
 
+-- TASK 5
 SELECT
 id,
 name,
@@ -171,6 +177,7 @@ year_level
 FROM students
 ORDER BY name ASC;
 
+-- TASK 6
 SELECT
 COUNT(*) AS total_enrollments
 FROM enrollments;
